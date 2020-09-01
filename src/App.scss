@@ -1,5 +1,41 @@
 .App {
-	background-color: #282c34;
+	background-color: #333;
 	height: 100vh;
 	text-align: center;
+
+	form {
+		margin: 0 auto;
+		position: relative;
+		width: 250px;
+
+		.input {
+			background-color: #fff;
+			background-clip: padding-box;
+			border: 1px solid #61dafb;
+			border-radius: .25rem;
+			box-shadow: 0 4px 80px #070509;
+			box-sizing: border-box;
+			color: #495057;
+			display: block;
+			line-height: 1.5;
+			font-size: 1rem;
+			font-weight: 400;
+			margin: 0 auto;
+			height: calc(1.5em + .75rem + 2px);
+			padding: .375rem .75rem;
+			width: 250px;
+		}
+
+		.reset {
+			background: transparent;
+			border: 0;
+			color: #495057;
+			height: 20px;
+			line-height: 20px;
+			position: absolute;
+			right: .375rem;
+			top: 9px;
+			width: 20px;
+		}
+	}
 }
