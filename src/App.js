@@ -11,7 +11,7 @@ function App() {
 		setCodeContent(e.target.value);
 	}
 
-	const handleInputReset = e => {
+	const handleInputReset = () => {
 		setCodeContent('');
 	}
 

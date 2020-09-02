@@ -1,11 +1,49 @@
 .qr-code {
-	background: white;
-	border: 1px solid #61dafb;
+	background: #111;
 	border-radius: .25rem;
 	box-shadow: 0 4px 80px #070509;
-
 	box-sizing: border-box;
-	height: 250px;
+	height: 276px;
 	margin: 20px auto;
-	width: 250px;
+	padding: 10px;
+	position: relative;
+	width: 276px;
+	z-index: 0;
+
+	&:before {
+		animation: glowing 20s linear infinite;
+		background: linear-gradient(90deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+		background-size: 400%;
+		border-radius: .25rem;
+		content: '';
+		filter: blur(5px);
+		height: calc(100% + 10px);
+		left:-5px;
+		position: absolute;
+		top: -5px;
+		width: calc(100% + 10px);
+		z-index: -1;
+	}
+
+	&:after {
+		background: #111;
+		border-radius: .25rem;
+		content: '';
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: -1;
+	}
+
+	svg {
+		max-width: 100%;
+	}
+}
+
+@keyframes glowing {
+	0% { background-position: 0 0; }
+	50% { background-position: 400% 0; }
+	100% { background-position: 0 0; }
 }

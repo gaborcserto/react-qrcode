@@ -6,7 +6,7 @@ const qrCode = ({content}) => {
 
 	return (
 		<div className="qr-code" >
-			{content ? <QRNormal value={content} /> : null }
+			{content ? <QRNormal value={content} otherColor="#000000" posColor="#000000"/> : null }
 		</div>
 	);
 }
